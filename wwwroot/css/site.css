@@ -1,0 +1,304 @@
+﻿html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+aside {
+    width: 600px;
+    height: auto;
+    margin-top: 600px;
+    border-radius: 1rem;
+    background-color: white;
+    float: left;
+    padding-top: 30px;
+}
+
+.menuBlock {
+    margin-top: 5px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background-color: inherit;
+}
+
+.nameMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    flex-grow: 2;
+    flex-basis: 250px;
+    border-radius: 0.5rem;
+    background-color: darkgrey;
+    color: black;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 5px black;
+}
+
+    .nameMenu:hover {
+        background-color: black;
+        color: white;
+    }
+
+.changeMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    flex-grow: 1;
+    flex-basis: 100px;
+    border-radius: 0.5rem;
+    background-color: darkgrey;
+    color: black;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 5px black;
+}
+
+    .changeMenu:hover {
+        background-color: black;
+        color: white;
+    }
+
+.delMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    flex-grow: 1;
+    flex-basis: 100px;
+    border-radius: 0.5rem;
+    background-color: darkgrey;
+    color: black;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 5px black;
+}
+
+    .delMenu:hover {
+        background-color: black;
+        color: white;
+    }
+
+body {
+    background-color: rgb(237, 237, 237);
+    position: relative;
+    padding-top: 100px;
+    height: 300vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    border-radius: 0 0 1rem 1rem;
+    background-color: rgb(200, 200, 200);
+    z-index: 2;
+}
+
+.progress-container {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 10px;
+    background: darkgrey;
+}
+
+.progress-bar {
+    height: 10px;
+    background: grey;
+    width: 0%;
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+a {
+    font-family: Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: lighter;
+    color: black;
+    text-decoration: none;
+}
+
+.testing {
+    padding: 20px 30px 20px 30px;
+    width: 100%;
+    height: 500px;
+    background-color: white;
+    box-shadow: 0 0 5px grey;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+    .gallery > .brandCard {
+        position: relative;
+        width: 500px;
+        height: 300px;
+        margin-top: 50px;
+        background-color: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px grey;
+        transition: all 0.5s ease-in-out;
+        filter: grayscale(100%);
+    }
+
+
+    .gallery .brandCard:hover:nth-child(odd) {
+        filter: grayscale(0%);
+        transform: rotate(2deg);
+        width: 550px;
+        background-size: cover;
+        transition: all 0.5s;
+        box-shadow: 0 0 15px grey;
+    }
+
+    .gallery .brandCard:hover:nth-child(even) {
+        filter: grayscale(0%);
+        transform: rotate(-2deg);
+        width: 550px;
+        background-size: cover;
+        transition: all 0.5s;
+        box-shadow: 0 0 15px grey;
+    }
+
+    .gallery .brandCard .head {
+        text-align: right;
+        margin: 30px 30px 0 0;
+        font-family: Helvetica, sans-serif;
+        font-size: 40px;
+        text-shadow: 1px 1px 15px black;
+        color: rgb(240, 240, 240);
+    }
+
+    .gallery .brandCard .mid {
+        position: absolute;
+        right: 30px;
+        width: 300px;
+        text-align: right;
+        font-family: Helvetica, serif;
+        font-size: 25px;
+        color: rgb(240, 240, 240);
+    }
+
+    .gallery .brandCard .foot {
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+        width: 150px;
+        height: 40px;
+        border: 0;
+        border-radius: 1rem;
+        transition: all 0.2s ease-in-out;
+        background-color: white;
+        box-shadow: 0 0 5px grey;
+        font-family: Helvetica, serif;
+        font-size: 25px;
+        color: black;
+    }
+
+        .gallery .brandCard .foot:hover {
+            border-radius: 3rem;
+            background-color: black;
+            color: white;
+        }
+
+    .scene {
+        margin-top: 50px;
+        width: 500px;
+        height: 300px;
+        perspective: 600px;
+    }
+
+    .carCard {
+        width: 100%;
+        height: 100%;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        transform-origin: center right;
+    }
+
+    .carCard_face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px grey;
+    }
+
+    .carCard_face--front {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carCard_face--front .head {
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+        font-size: 40px;
+        text-shadow: 1px 1px 15px black;
+        color: rgb(240, 240, 240);
+    }
+
+    .carCard_face--back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 50px;
+        text-shadow: 1px 1px 20px black;
+        color: white;
+        font-style: italic;
+        filter: grayscale(70%);
+        transform: rotateY(180deg);
+    }
+
+    .carCard_face--back > ul > li{
+        list-style-type: none;
+    }
+
+    .is-flipped {
+        transform: translateX(-100%) rotateY(-180deg);
+    }
+
+.testbutton {
+    position: fixed;
+    right: 70px;
+    bottom: 30px;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    border-radius: 5rem;
+    border: 0;
+    background-color: rgb(100, 100, 100);
+    filter: opacity(50%);
+    animation: circle 5s ease-in-out infinite;
+}
+
+@keyframes circle {
+    70% {
+        transform: none;
+    }
+
+    90% {
+        transform: scaleX(0.2);
+    }
+}

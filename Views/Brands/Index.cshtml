@@ -1,0 +1,13 @@
+@using System.Linq
+@model IEnumerable<WebApplication1.ViewModels.BrandViewModel>
+
+<div class="gallery">
+    @foreach(var item in Model)
+            {
+                <div class="brandCard" style="background:linear-gradient(45deg, rgb(103, 0, 31, .4), rgb(34, 101, 163, .3)), url(@item.BrandPicture); background-size: cover;">
+                    <h2 class="head">@item.BrandName</h2>
+                    <p class="mid">@item.Description</p>
+                    <button class="foot"><a asp-controller="Cars" asp-action="Index" asp-route-id="@item.BrandId">See More</a></button>
+                </div>
+            }
+</div>

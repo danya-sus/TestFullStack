@@ -1,0 +1,38 @@
+@using System.Linq
+@model IEnumerable<WebApplication1.ViewModels.CarViewModel> 
+
+<aside>
+    @foreach (var item in Model)
+    {
+        <div class="menuBlock">
+            <div class="nameMenu" href="@item.CarId">
+                <h2>@item.CarName</h2>
+            </div>
+            <div class="changeMenu">
+                <h2>Change</h2>
+            </div>
+            <div class="delMenu">
+                <h2>Delete</h2>
+            </div>
+        </div>
+    }
+</aside>
+<div class="gallery">
+    @foreach(var item in Model)
+    {
+     <div class="scene">
+         <div class="carCard" id="@item.CarId">
+             <div class="carCard_face carCard_face--front" style="background-image: linear-gradient(45deg, rgb(103, 0, 31, .4), rgb(34, 101, 163, .3)), url(@item.CarPicture); background-size: cover">
+                <h2 class="head">@item.CarName</h2>
+             </div>
+             <div class="carCard_face carCard_face--back" style="background-image: linear-gradient(45deg, rgb(34, 101, 163, .3), rgb(103, 0, 31, .4)), url(@item.CarPicture); background-size: cover">
+                 <ul>
+                     <li>Power: @item.Power HP</li>
+                     <li>Torque: @item.Torque N*m</li>
+                     <li>Weight: @item.Weight Kg</li>
+                 </ul>
+             </div>
+         </div>
+     </div>
+    }
+</div>
